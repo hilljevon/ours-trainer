@@ -27,9 +27,6 @@ export default function ClientLayout({
         { name: "Dashboard", href: "/" },
         { name: "AD", href: "/AD" },
         { name: "DCP", href: "/DCP" },
-        { name: "DCT", href: "/DCT" },
-        { name: "CCR", href: "/CCR" },
-        { name: "Stability", href: "/Stability" },
         { name: "SCAN", href: "/SCAN" },
     ];
 
