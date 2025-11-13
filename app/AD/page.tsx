@@ -79,7 +79,7 @@ export default function ADPage() {
                             </p>
                         </CardContent>
                     </Card>
-
+                    <Separator className="my-10" />
                     {/* Section 3: RR Workflow Continued */}
                     <Card className="mb-10 border-none shadow-none">
                         <CardHeader>
@@ -105,7 +105,7 @@ export default function ADPage() {
                             </p>
                         </CardContent>
                     </Card>
-
+                    <Separator className="my-10" />
                     {/* Section 4: CCR RR Workflow */}
                     <Card className="mb-10 border-none shadow-none">
                         <CardHeader>
@@ -125,7 +125,7 @@ export default function ADPage() {
                             </ul>
                         </CardContent>
                     </Card>
-
+                    <Separator className="my-10" />
                     {/* Section 5: Tagging Faxes */}
                     <Card className="mb-10 border-none shadow-none">
                         <CardHeader>
@@ -157,7 +157,7 @@ export default function ADPage() {
                             </ul>
                         </CardContent>
                     </Card>
-
+                    <Separator className="my-10" />
                     {/* Section 6: Identifying Orders */}
                     <Card className="mb-10 border-none shadow-none">
                         <CardHeader>
@@ -179,7 +179,7 @@ export default function ADPage() {
                             </p>
                         </CardContent>
                     </Card>
-
+                    <Separator className="my-10" />
                     {/* Section 7: Opening Cases */}
                     <Card className="border-none shadow-none">
                         <CardHeader>
