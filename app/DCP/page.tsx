@@ -1,168 +1,247 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function DcpPage() {
     return (
-        <div className="w-full flex justify-center px-6 py-10">
-            <Card className="w-full max-w-6xl px-8 py-10 shadow-lg border bg-white rounded-2xl">
-                <h1 className="text-3xl font-semibold mb-6">DCP Workflow</h1>
+        <div className="min-h-screen bg-gray-50 text-gray-900 p-8">
+            <div className="max-w-7xl mx-auto w-full">
 
-                {/* --- OVERVIEW --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">Overview</h2>
-                    <p className="text-gray-700 leading-relaxed">
-                        DCP works with CMA’s and REF RN for discharge planning such as DME, HH,
-                        SNF, ARU, Hospice, and referral cases.
-                    </p>
-                </section>
+                <h1 className="text-4xl font-semibold text-indigo-600 mb-2">
+                    DCP Assignment Overview
+                </h1>
 
-                <Separator className="my-8" />
+                <p className="text-gray-600 mb-8 text-base max-w-5xl">
+                    This page covers DCP responsibilities, groupchat workflows, calls, RR rules, and tagging.
+                    Use this reference page alongside the chatbot trainer as needed.
+                </p>
 
-                {/* --- TAGGING --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">Tagging</h2>
-                    <p className="text-gray-700 leading-relaxed">
-                        In RightFax: navigate to
-                        <strong> Other Users → OURS-REFERRAL-888 → Main</strong>.
-                        All DCP + REF UA’s help with tagging and opening cases.
-                    </p>
-                    <p className="text-gray-700">Use AD Tagging as a reference guide.</p>
-                </section>
+                <ScrollArea className="h-[85vh] rounded-md border border-gray-200 bg-white shadow-sm p-10">
 
-                <Separator className="my-8" />
+                    {/* Section 1: Overview */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                DCP Overview
+                            </CardTitle>
+                        </CardHeader>
 
-                {/* --- GROUPCHATS --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">Groupchats</h2>
-                    <p className="text-gray-700">At the start of a DCP shift, you will join:</p>
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+                            <p>
+                                DCP works with CMA’s and REF RN on discharge planning such as DME, HH, SNF, ARU, Hospice,
+                                and referral-related cases.
+                            </p>
+                        </CardContent>
+                    </Card>
 
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Main DCP chat (DCP/REF UA’s + CMA’s + ACS)</li>
-                        <li>ACS Groupchat</li>
-                        <li>AD DCP Groupchat (AD RR + DCP UA’s)</li>
-                    </ul>
-                </section>
+                    <Separator className="my-10" />
 
-                <Separator className="my-8" />
+                    {/* Section 2: Tagging */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                Tagging – RightFax
+                            </CardTitle>
+                        </CardHeader>
 
-                {/* --- MAIN GROUPCHAT DETAILS --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">Main DCP Groupchat</h2>
-                    <p className="text-gray-700">
-                        You may communicate with your CMA here or through private chats. UA’s
-                        may also receive requests for patients shared by multiple CMA’s.
-                    </p>
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
 
-                    <p className="text-gray-700">Examples of requests:</p>
+                            <p>
+                                In RightFax, go to:
+                                <br />
+                                <strong>Other Users → OURS-REFERRAL-888 → Main</strong>.
+                            </p>
 
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Checking SIH</li>
-                        <li>Confirming DME with vendors</li>
-                        <li>Calling SNF/ARU admissions</li>
-                        <li>Letters</li>
-                        <li>Engagements</li>
-                    </ul>
-                </section>
+                            <p>
+                                All DCP + REF UA’s assist with tagging and opening cases.
+                                Follow AD Tagging guidelines for how to tag properly.
+                            </p>
 
-                <Separator className="my-8" />
+                        </CardContent>
+                    </Card>
 
-                {/* --- ACS GROUPCHAT --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">ACS Groupchat</h2>
+                    <Separator className="my-10" />
 
-                    <p className="text-gray-700">Examples of ACS requests:</p>
+                    {/* Section 3: Groupchats */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                Groupchats at Start of Shift
+                            </CardTitle>
+                        </CardHeader>
 
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Opening REF cases, confirming SIH</li>
-                        <li>Reopening REF cases as claims cases</li>
-                        <li>Messaging PCP offices for outpatient follow-up</li>
-                    </ul>
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+                            <p>At the beginning of each DCP shift, you'll join:</p>
 
-                    <p className="text-gray-700">
-                        UA’s notify ACS about OP Therapy Orders, auth extension requests,
-                        and special DME sizing.
-                    </p>
-                </section>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Main DCP groupchat (DCP/REF UA’s + CMA’s + ACS)</li>
+                                <li>ACS groupchat</li>
+                                <li>AD | DCP groupchat (AD RR + DCP UA’s)</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
 
-                <Separator className="my-8" />
+                    <Separator className="my-10" />
 
-                {/* --- AD DCP GROUPCHAT --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">AD | DCP Groupchat</h2>
-                    <p className="text-gray-700">
-                        AD RR requests CCR or REF cases to be reassigned to CMA desks for DCP needs.
-                        DCP assigns and updates AD with which CMA received the case.
-                        RR’s back to CCR are communicated here.
-                    </p>
-                </section>
+                    {/* Section 4: Main DCP Groupchat */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                Main DCP Groupchat
+                            </CardTitle>
+                        </CardHeader>
 
-                <Separator className="my-8" />
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
 
-                {/* --- DCP CALLS --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">DCP Calls</h2>
+                            <p>
+                                You may communicate with your CMA here or through private chats.
+                                UA’s may also receive requests when multiple CMA’s share a patient.
+                            </p>
 
-                    <p className="text-gray-700">
-                        OPSTEL assignment will be <strong>Analyst DCP</strong>.
-                    </p>
+                            <p>Examples of CMA requests:</p>
 
-                    <p className="text-gray-700">Common call types:</p>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Checking if a patient is SIH</li>
+                                <li>Confirming DME with vendors</li>
+                                <li>Calling SNF/ARU admissions for acceptance</li>
+                                <li>Letters</li>
+                                <li>Engagements</li>
+                            </ul>
 
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700 leading-relaxed">
-                        <li>NKF initiating placement (SNF/ARU) or sending HH/DME orders</li>
-                        <li>NKF following up on existing placements or orders</li>
-                        <li>If orders not sent yet, provide OURS fax number</li>
-                        <li>If orders were sent, check Reno notes before updating</li>
-                        <li>
-                            Placement typically takes a few days, so communicate clearly with NKF
-                            that we are actively managing and checking for bed availability
-                        </li>
-                    </ul>
-                </section>
+                        </CardContent>
+                    </Card>
 
-                <Separator className="my-8" />
+                    <Separator className="my-10" />
 
-                {/* --- DCP RR --- */}
-                <section className="space-y-4">
-                    <h2 className="text-xl font-semibold">DCP RR Workflow</h2>
+                    {/* Section 5: ACS Groupchat */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                ACS Groupchat
+                            </CardTitle>
+                        </CardHeader>
 
-                    <p className="text-gray-700">
-                        All RR tracking is in the DCP spreadsheet:
-                    </p>
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+                            <p>Common ACS requests include:</p>
 
-                    <p className="text-gray-700">
-                        <strong>OURS Remote Work 2023 → DCP → Files → DCP RR List – CURRENT MONTH</strong>
-                    </p>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Opening REF cases or confirming SIH</li>
+                                <li>Reopening REF cases as claims</li>
+                                <li>Sending messages to PCP offices for outpatient follow up</li>
+                            </ul>
 
-                    <p className="text-gray-700 leading-relaxed">
-                        Go to the current date and wait for CMA’s to confirm they are “updated.”
-                        This means their RR list reflects everything they’ll handle today.
-                    </p>
+                            <p>
+                                UA’s notify ACS of OP therapy orders, auth extensions,
+                                and special DME sizing requests.
+                            </p>
 
-                    <p className="text-gray-700">CMA list shows:</p>
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Name</li>
-                        <li>Number of placements</li>
-                        <li>Cutoff times</li>
-                    </ul>
+                        </CardContent>
+                    </Card>
 
-                    <p className="text-gray-700 leading-relaxed">
-                        Assign new SNF/ARU cases left-to-right to whoever has the <strong>lowest placements</strong>,
-                        regardless of total case count.
-                    </p>
+                    <Separator className="my-10" />
 
-                    <p className="text-gray-700 leading-relaxed">
-                        After assignment:
-                    </p>
-                    <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Notify the CMA in main DCP chat</li>
-                        <li>Update their placement count</li>
-                        <li>Notify AD in AD | DCP chat so CMA receives the case in Reno</li>
-                    </ul>
-                </section>
-            </Card>
+                    {/* Section 6: AD | DCP Groupchat */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                AD | DCP Groupchat
+                            </CardTitle>
+                        </CardHeader>
+
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+                            <p>
+                                AD RR may request CCR or REF cases to be assigned to CMA desks for DCP needs.
+                                DCP assigns the case and updates AD on which CMA received it.
+                            </p>
+
+                            <p>
+                                Any cases that need to be RR’d back to CCR can also be communicated in this chat.
+                            </p>
+                        </CardContent>
+                    </Card>
+
+                    <Separator className="my-10" />
+
+                    {/* Section 7: DCP Calls */}
+                    <Card className="mb-10 border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                DCP Calls
+                            </CardTitle>
+                        </CardHeader>
+
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+
+                            <p>
+                                OPSTEL assignment for DCP is <strong>Analyst DCP</strong>.
+                            </p>
+
+                            <p>Common call types include:</p>
+
+                            <ul className="list-disc list-inside space-y-1 leading-relaxed">
+                                <li>NKF initiating placement (SNF/ARU)</li>
+                                <li>Processing orders for HH or DME</li>
+                                <li>NKF following up on placement or orders</li>
+                                <li>Providing OURS fax number if orders not yet sent</li>
+                                <li>Checking Reno notes before giving updates</li>
+                                <li>Telling NKF we are actively managing placement when no updates exist</li>
+                            </ul>
+
+                        </CardContent>
+                    </Card>
+
+                    <Separator className="my-10" />
+
+                    {/* Section 8: DCP RR Workflow */}
+                    <Card className="border-none shadow-none">
+                        <CardHeader>
+                            <CardTitle className="text-2xl text-indigo-600">
+                                DCP RR Workflow
+                            </CardTitle>
+                        </CardHeader>
+
+                        <CardContent className="space-y-3 text-base text-gray-700 leading-relaxed">
+
+                            <p>
+                                All RR tracking is located in the DCP spreadsheet:
+                            </p>
+
+                            <p>
+                                <strong>OURS Remote Work 2023 → DCP → Files → DCP RR List – CURRENT MONTH</strong>
+                            </p>
+
+                            <p>
+                                Go to the current date and wait for CMA’s to confirm they are “updated.”
+                                This means they’ve added everything they will work on today.
+                            </p>
+
+                            <p>CMA information will show:</p>
+
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Name</li>
+                                <li>Number of placements</li>
+                                <li>Cutoff times</li>
+                            </ul>
+
+                            <p>
+                                Assign new SNF/ARU cases to the CMA with the <strong>lowest placement count</strong>,
+                                regardless of total caseload.
+                            </p>
+
+                            <p>After assigning:</p>
+
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>Notify the CMA in the main DCP groupchat</li>
+                                <li>Update their placement number</li>
+                                <li>Notify AD in AD | DCP chat so the CMA receives the case in Reno</li>
+                            </ul>
+
+                        </CardContent>
+                    </Card>
+                </ScrollArea>
+            </div>
         </div>
     );
 }
